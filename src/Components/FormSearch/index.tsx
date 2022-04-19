@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Container, Form, Title, Input, Submit, InputGroup } from "./styles"
 
 import type { Coord } from "@types";
@@ -25,6 +25,10 @@ export default function FormSearch({ onSubmit, defaultValue }: FormSeachProps) {
       setCoord({ ...coord });
     }
   }
+
+  useEffect(() => {
+    if(defaultValue) setCoord(defaultValue)
+  }, [defaultValue])
 
   return (
     <Container>

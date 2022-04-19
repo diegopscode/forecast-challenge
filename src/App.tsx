@@ -29,6 +29,7 @@ function App() {
    try {
     const resp = await getLocationFromCoorinates(coord)
     const { timeZone, relativeLocation: { properties }, forecast} = resp.data.properties;
+
     const respForecast = await getForecast(forecast)
     
     setForecast(respForecast.data.properties.periods)
@@ -40,6 +41,8 @@ function App() {
         state: properties.state
       }
     })
+
+    setCoord(coord)
    } catch {
      console.error("Maybe your coordinates are not from the US!")
      setIsEnable(false)
@@ -59,7 +62,6 @@ function App() {
       const { latitude, longitude } = position.coords;
       const coords = { lat: latitude, long: longitude }
       FetchForecast(coords);
-      setCoord(coords)
     });
   }, [])
 
