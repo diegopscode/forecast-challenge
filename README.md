@@ -1,3 +1,12 @@
+# Forecast Challenge
+
+## How to Run
+````
+yarn
+yarn dev
+````
+
+## Intructions
 As a part of our interview process, we ask each candidate to complete a short programming exercise with the following instructions:
 
 Using React & typescritp, connect to a public weather and geocoding REST APIs. Display the 7 day forecast for a specified address on an HTML page.
