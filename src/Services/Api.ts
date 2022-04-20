@@ -1,8 +1,7 @@
 import Axios from "axios"
 
 export const API = Axios.create({
-  baseURL: 'https://api.weather.gov',
-  timeout: 1000
+  baseURL: 'https://api.weather.gov'
 })
 
 
