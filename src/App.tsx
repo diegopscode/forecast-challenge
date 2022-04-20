@@ -58,7 +58,7 @@ function App() {
   }
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function(position) {
+    navigator.geolocation?.getCurrentPosition(function(position) {
       const { latitude, longitude } = position.coords;
       const coords = { lat: latitude, long: longitude }
       FetchForecast(coords);

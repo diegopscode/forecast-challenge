@@ -5,11 +5,11 @@ import type { Coord } from "@types";
 
 type FormSeachProps = {
   onSubmit: ({lat, long}: Coord) => void;
-  defaultValue: Coord;
+  defaultValue?: Coord;
 }
 
 export default function FormSearch({ onSubmit, defaultValue }: FormSeachProps) {
-  const [coord, setCoord] = useState<any>(defaultValue)
+  const [coord, setCoord] = useState<any>(defaultValue || { lat: 0, long: 0 })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
