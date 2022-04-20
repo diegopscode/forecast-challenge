@@ -6,4 +6,4 @@ export const API = Axios.create({
 })
 
 
-export const FETCH = Axios.create({ timeout: 1000 })
+export const FETCH = Axios.create()
