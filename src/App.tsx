@@ -54,7 +54,7 @@ function App() {
   }
 
   const GetLocationName = () => {
-    return `${location.timeZone} - ${location.properties.city}/${location.properties.state}`;
+    return `${location.properties.city}/${location.properties.state}`;
   }
 
   useEffect(() => {
