@@ -32,7 +32,7 @@ export default function FormSearch({ onSubmit, defaultValue }: FormSeachProps) {
 
   return (
     <Container>
-      <Title>Try to another location</Title>
+      <Title>Search any US location</Title>
       <Form onSubmit={handleSubmit}>
         <InputGroup>
           <Input type="text"name="lat" placeholder="Lat" onChange={handleChangeItem} value={coord.lat} />
